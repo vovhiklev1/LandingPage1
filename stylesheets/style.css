@@ -1,0 +1,146 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+   // background: grey;
+
+}
+
+.mCSB_container {
+    margin-right: 0;
+}
+
+{
+    outline: 1px solid red
+}
+
+h1, h2 { margin: 0;
+   // color: #ffffff;
+    font-size: 3.6em;
+    line-height: 1.6em;
+    text-align: center;
+    font-weight: 200;
+}
+
+a {
+    color: #c8c8c8;
+}
+
+p {
+    color: #c8c8c8;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    text-align: center;
+    font-weight: 300;
+}
+
+header {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    background: #111111;
+    overflow: hidden;
+    -webkit-transition: .4s ease-out;
+    -webkit-transition-delay: 0.5s;
+    -o-transition: .4s ease-out;
+    -o-transition-delay: 0.5s;
+    -moz-transition: .4s ease-out;
+    -moz-transition-delay: 0.5s;
+    transition: .4s ease-out;
+    transition-delay: 0.5s;
+
+}
+
+#logo {
+    position: absolute;
+    float: left;
+    min-height: 30px;
+    width: 70px;
+    margin: 1% 0 1% 4%;
+    background: url(../img/logo.png) no-repeat;
+    background-size: cover;
+
+}
+
+header ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: inline-block;
+    float: left;
+    padding: 2% 15px;
+
+}
+
+header li a {
+    text-decoration: none;
+
+}
+
+header li a:hover {
+
+    color: #fff;
+}
+
+.present {
+
+    height: 800px;
+    width: 100%;
+    /*width: 100%;
+    max-width: 100%;
+    height: 800px;
+    background: url("../img/bg-1.jpg") no-repeat center top fixed;
+    background-size: cover;*/
+
+}
+
+.present .present-image{
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    max-width: 100%;
+    height: 900px;
+    background: url("../img/bg-1.jpg") no-repeat center center;
+    background-size: cover;
+
+}
+.present h1 {
+    padding-top: 300px;
+
+}
+
+.present p {
+    color: #fff;
+}
+
+.details {
+    float: left;
+    background: grey;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .present {
+        height: 550px;
+    }
+
+    body {
+        color: red
+    }
+}
+
+/*
+@media screen and (max-width: 992px) {
+    .present {
+        height: 900px;
+}
+*/
