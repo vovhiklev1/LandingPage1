@@ -179,24 +179,21 @@ header li a:hover {
 
 .details {
     background: #232323;
-    padding: 80px 0;
+    padding: 7% 0;
     margin: 0;
     width: 100%;
-    height: 120%;
-    overflow: hidden;
-
+}
+.details .details-container{
+    padding: 0 5%;
 }
 
 .details section {
     float: left;
     width: 33%;
-    height: 100%;
-    padding: 80px 0 0 0;
-    overflow: hidden;
-
+    padding: 5% 0 0 0;
 }
 
-.details .details-container {
+.details .details-content {
     width: 70%;
 }
 
@@ -240,92 +237,124 @@ header li a:hover {
 }
 
 .details section .details-img {
-    width: 100%;
-    height: 70%;
+    max-width: 250px;
+    margin: auto;
+    /*height: 70%;
     background: url("../img/single-iphone.png") no-repeat center top;
-    background-size: contain;
+    background-size: contain;*/
 
 }
 
-.clearfix {
-    zoom: 1;
-}
-
-.clearfix:before,
-.clearfix {
-    content: "";
-    display: table;
+.details section .details-img img {
+    width: 100%;
 }
 
 .clearfix:after {
+    content: "";
+    display: block;
     clear: both;
-}
-
-.explain-first {
-    background: #161616;
-
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
     margin: 0;
+    padding: 0;
+}
+
+.explain {
+    background: #161616;
+    margin: 0;
+    padding: 10% 0;
     width: 100%;
-    height: 100%;
-
 }
 
-.explain-container {
-    height: 100%;
-    padding: 7% 0;
-
-}
-
-.explain-first section {
-    float: left;
-    width: 50%;
-    height: 100%;
-
-}
-
-.explain-content {
+.explain .explain-container{
     padding: 0 5%;
 }
 
-.explain-first section .explain-first-img {
+/*.explain .explain-container {
+/ / height : 80 %;
+}*/
+
+.explain section {
+    float: left;
+    width: 50%;
+}
+
+
+.explain section .explain-img {
+    max-width: 350px;
+    margin: auto;
+}
+
+.explain section .explain-img img {
     width: 100%;
-    height: 100%;
-    background: url("../img/2-iphone-left.png") no-repeat center top;
-    background-size: contain;
+    /*background: url("../img/2-iphone-left.png") no-repeat center center;
+    background-size: contain;*/
 }
 
-.explain-first section .explain-first-container {
-    width: 60%;
-
+.explain section ul li {
+    clear: both;
+    padding: 5% 0;
 }
 
-.explain-first .explain-first-left {
+.explain .explain-left {
     float: left;
 }
 
-.explain-first .icon-container-left {
+.explain .icon-container-left {
     float: left;
     text-align: left;
 }
 
-.explain-first .icon-container {
+.explain .icon-container {
     width: 5%;
     padding: 1% 1% 0 0;
 }
 
-.explain-first section  h2 {
+.explain section h2 {
     text-align: left;
 }
 
-.explain-first section p {
+.explain section p {
     text-align: left;
     margin: 0;
+
 }
 
-.explain-first section ul li {
-    clear: both;
-    padding: 5% 0;
+.describe {
+    background: #232323;
+    margin: 0;
+    padding: 10% 0;
+    width: 100%;
+}
 
+.describe .describe-container {
+    padding: 0 5%;
+}
+
+/*.explain .explain-container {
+/ / height : 80 %;
+}*/
+
+.describe section {
+    float: left;
+    width: 50%;
+}
+
+.describe section .describe-img {
+    max-width: 350px;
+    margin: auto;
+}
+
+.describe section .describe-img img {
+    width: 100%;
+    /*background: url("../img/2-iphone-left.png") no-repeat center center;
+    background-size: contain;*/
+}
+
+.describe section h2, .describe section p {
+    text-align: left;
+    padding: 2% 0;
 }
 
 @media screen and (max-width: 768px) {
