@@ -13,7 +13,7 @@ html, body {
     margin-right: 0;
 }
 
-{
+ {
     outline: 1px solid red
 }
 
@@ -164,6 +164,14 @@ header li a:hover {
     text-decoration: none;
 }
 
+.btn > i {
+    color: #ffffff;
+}
+
+.btn:hover > i {
+    color: #5B5B5B;
+}
+
 .btn-center {
     width: 100%;
     text-align: center
@@ -171,23 +179,25 @@ header li a:hover {
 
 .details {
     background: #232323;
-    overflow: hidden;
-    padding: 120px 0;
+    padding: 80px 0;
     margin: 0;
     width: 100%;
-    height: 100%;
+    height: 120%;
+    overflow: hidden;
+
 }
 
 .details section {
     float: left;
-    width: 30%;
+    width: 33%;
     height: 100%;
-    padding: 0 20px;
+    padding: 80px 0 0 0;
+    overflow: hidden;
+
 }
 
 .details .details-container {
     width: 70%;
-
 }
 
 .details .details-left {
@@ -224,16 +234,97 @@ header li a:hover {
 .details i {
 }
 
-section ul li {
+.details section ul li {
     clear: both;
     padding: 20px 0;
 }
 
 .details section .details-img {
     width: 100%;
+    height: 70%;
+    background: url("../img/single-iphone.png") no-repeat center top;
+    background-size: contain;
+
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before,
+.clearfix {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.explain-first {
+    background: #161616;
+
+    margin: 0;
+    width: 100%;
     height: 100%;
-    background: url("../img/single-iphone.png") no-repeat center center;
-    background-size: 65% auto;
+
+}
+
+.explain-container {
+    height: 100%;
+    padding: 7% 0;
+
+}
+
+.explain-first section {
+    float: left;
+    width: 50%;
+    height: 100%;
+
+}
+
+.explain-content {
+    padding: 0 5%;
+}
+
+.explain-first section .explain-first-img {
+    width: 100%;
+    height: 100%;
+    background: url("../img/2-iphone-left.png") no-repeat center top;
+    background-size: contain;
+}
+
+.explain-first section .explain-first-container {
+    width: 60%;
+
+}
+
+.explain-first .explain-first-left {
+    float: left;
+}
+
+.explain-first .icon-container-left {
+    float: left;
+    text-align: left;
+}
+
+.explain-first .icon-container {
+    width: 5%;
+    padding: 1% 1% 0 0;
+}
+
+.explain-first section  h2 {
+    text-align: left;
+}
+
+.explain-first section p {
+    text-align: left;
+    margin: 0;
+}
+
+.explain-first section ul li {
+    clear: both;
+    padding: 5% 0;
 
 }
 
