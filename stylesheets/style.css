@@ -87,10 +87,10 @@ header {
     width: 70px;
     margin: 1% 0 1% 4%;
     background: url(../img/logo.png) no-repeat;
-    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
 
 }
 
@@ -118,16 +118,8 @@ header li a:hover {
 }
 
 .present {
-
     height: 800px;
     width: 100%;
-
-    /*width: 100%;
-    max-width: 100%;
-    height: 800px;
-    background: url("../img/bg-1.jpg") no-repeat center top fixed;
-    background-size: cover;*/
-
 }
 
 .present .present-image {
@@ -137,10 +129,10 @@ header li a:hover {
     max-width: 100%;
     height: 900px;
     background: url("../img/bg-1.jpg") no-repeat center center;
-    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
 
 }
 
@@ -255,10 +247,6 @@ header li a:hover {
 .details section .details-img {
     max-width: 250px;
     margin: auto;
-    /*height: 70%;
-    background: url("../img/single-iphone.png") no-repeat center top;
-    background-size: contain;*/
-
 }
 
 .details section .details-img img {
@@ -303,8 +291,6 @@ header li a:hover {
 
 .explain section .explain-img img {
     width: 100%;
-    /*background: url("../img/2-iphone-left.png") no-repeat center center;
-    background-size: contain;*/
 }
 
 .explain section ul li {
@@ -363,8 +349,6 @@ header li a:hover {
 
 .describe section .describe-img img {
     width: 100%;
-    /*background: url("../img/2-iphone-left.png") no-repeat center center;
-    background-size: contain;*/
 }
 
 .describe section h2, .describe section p {
@@ -410,10 +394,10 @@ header li a:hover {
     width: 100%;
     height: 80%;
     background: url("../img/bg-2.jpg") no-repeat center center fixed;
-    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
 }
 
 .overlay {
@@ -591,16 +575,14 @@ header li a:hover {
 }
 
 .screenshots-preview {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.55);
 }
-
-
 
 .screenshots-preview .preview-control {
     position: relative;
@@ -615,13 +597,12 @@ header li a:hover {
     height: 70%;
 }
 
-.screenshots-preview .preview-control   .control-left {
-    left: 0; border: 1px solid yellow;
+.screenshots-preview .preview-control .control-left {
+    left: 0;
 }
 
-.screenshots-preview .preview-control  .control-right {
+.screenshots-preview .preview-control .control-right {
     right: 0;
-    border: 1px solid yellow;
 }
 
 .screenshots-preview .preview-control .control .control-box {
@@ -629,30 +610,73 @@ header li a:hover {
     top: -50%;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0);
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    -moz-transition: .5s ease;
+    transition: .5s ease;
 }
 
+.screenshots-preview .preview-control .control .control-box:hover {
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    -moz-transition: .2s ease;
+    transition: .2s ease;
+}
+
+.screenshots-preview .preview-control .control .control-box:hover .arrow, .preview-control .control-close .close:hover {
+    color: #ffffff;
+}
 
 .screenshots-preview .preview-control .control .control-btn {
     position: absolute;
-    border: 1px solid yellow;
-    height: auto; top: -50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    margin: auto;
 }
 
 .screenshots-preview .preview-control .control .control-btn .arrow {
-    color: #ffffff;
-    font-size: 10em;
-
-
+    //display: block;
+    color: #838383;
+    font-size: 5em;
+    font-weight: 300;
 }
 
 .screenshots-preview .preview-control .control .control-btn .arrow .arrow-left {
     left: 0;
 }
+
 .screenshots-preview .preview-control .control .control-btn .arrow .arrow-left {
     right: 0;
 }
 
+.preview-control .control-close {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.preview-control .control-close .close {
+    color: #838383;
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.screenshots-preview .preview-control .preview-img {
+    height: 100%;
+    width: 100%;
+    background: url("../img/_3.jpg") no-repeat center center ;
+    -webkit-background-size: auto 80%;
+    -moz-background-size: auto 80%;
+    -o-background-size: auto 80%;
+    background-size: auto 80% ;
+
+}
 
 @media screen and (max-width: 768px) {
     .present {
