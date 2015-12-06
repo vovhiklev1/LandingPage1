@@ -13,7 +13,7 @@ html, body {
     margin-right: 0;
 }
 
- {
+{
     outline: 1px solid red
 }
 
@@ -88,6 +88,9 @@ header {
     margin: 1% 0 1% 4%;
     background: url(../img/logo.png) no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 
 }
 
@@ -135,6 +138,9 @@ header li a:hover {
     height: 900px;
     background: url("../img/bg-1.jpg") no-repeat center center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 
 }
 
@@ -405,6 +411,9 @@ header li a:hover {
     height: 80%;
     background: url("../img/bg-2.jpg") no-repeat center center fixed;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 .overlay {
@@ -417,46 +426,233 @@ header li a:hover {
     padding: 10% 5%;
 }
 
-.slider-container .slide {
+.feedbacks .slider-container .slide {
     width: 65%;
     margin: auto;
-   // position: relative;
 
 }
 
-.slide .slide-item {
+.feedbacks .slider-container .slide .slide-item {
     display: none;
-    /*position: absolute;
-    top: 0;
-    border: 0;*/
+
 }
 
-.slide .active {
+.feedbacks .slider-container .slide .active {
     display: block;
 }
 
-.slide h3, .slide h4 {
+.feedbacks .slider-container .slide h3, .slide h4 {
     text-align: center;
     color: #ffffff;
 }
-.slide .white-line{
+
+.feedbacks .slider-container .slide .white-line {
     border-top: 1px solid #ffffff;
     width: 35%;
     margin: auto;
 }
 
-.slide p {
+.feedbacks .slider-container .slide p {
     text-align: center;
     color: #ffffff;
     padding: 2% 0;
 }
 
-.slide img {
+.feedbacks .slider-container .slide img {
     display: block;
     margin: auto;
     border-radius: 50%;
     border: 2px solid #ffffff;
 }
+
+.feedbacks .slider-container .slide-control {
+    padding: 3% 0;
+    width: 65%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.feedbacks .slider-container .slide-control .control-item1 {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.feedbacks .slider-container .slide-control .active {
+    background: #869791;
+}
+
+.articles {
+    background: #222222;
+    width: 100%;
+    padding: 10% 0;
+}
+
+.articles p {
+    padding: 2% 0;
+}
+
+.articles .articles-container {
+    padding: 0 5%;
+}
+
+.articles article {
+    float: left;
+    width: 33%;
+}
+
+.articles article p {
+    text-align: center;
+    padding: 1% 5%;
+}
+
+.articles article h3 {
+    text-align: center;
+    padding: 3%;
+    color: #0874AB;
+}
+
+.articles .article-icon {
+    width: 100%;
+    margin: auto;
+}
+
+.articles article .article-icon i {
+    display: block;
+    text-align: center;
+    font-size: 5em;
+    color: #008DD5;
+}
+
+.screenshots {
+    background: #161616;
+    margin: 0;
+    width: 100%;
+    padding: 5% 0;
+}
+
+.screenshots .screenshots-container {
+    padding: 0 5%;
+
+}
+
+.screenshots .screenshots-container .slider-container {
+    padding-top: 5%;
+}
+
+.screenshots .slider-screenshots {
+    clear: both;
+    width: 100%;
+}
+
+.screenshots .slide {
+    float: left;
+    width: 25%;
+}
+
+.screenshots .slide .slide-item {
+    padding: 5%;
+}
+
+.screenshots .slide .slide-item .item {
+    border: 10px solid #232323;
+    background: #232323;
+    border-radius: 2%;
+}
+
+.screenshots .slide .slide-item img {
+    width: 100%;
+    border-radius: 2%;
+}
+
+.screenshots .slider-container .slide-control {
+    padding: 3% 0;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.screenshots .slide-control .control-item1 {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #0B5276;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.screenshots .slide-control .active {
+    background: #008ED6;
+}
+
+.screenshots-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+
+
+.screenshots-preview .preview-control {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.screenshots-preview .preview-control .control {
+    position: absolute;
+    top: 50%;
+    width: 5%;
+    height: 70%;
+}
+
+.screenshots-preview .preview-control   .control-left {
+    left: 0; border: 1px solid yellow;
+}
+
+.screenshots-preview .preview-control  .control-right {
+    right: 0;
+    border: 1px solid yellow;
+}
+
+.screenshots-preview .preview-control .control .control-box {
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+.screenshots-preview .preview-control .control .control-btn {
+    position: absolute;
+    border: 1px solid yellow;
+    height: auto; top: -50%;
+}
+
+.screenshots-preview .preview-control .control .control-btn .arrow {
+    color: #ffffff;
+    font-size: 10em;
+
+
+}
+
+.screenshots-preview .preview-control .control .control-btn .arrow .arrow-left {
+    left: 0;
+}
+.screenshots-preview .preview-control .control .control-btn .arrow .arrow-left {
+    right: 0;
+}
+
 
 @media screen and (max-width: 768px) {
     .present {
