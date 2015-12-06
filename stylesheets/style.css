@@ -35,6 +35,15 @@ h3 {
     font-weight: 400;
 }
 
+h4 {
+    margin: 0;
+    color: #c8c8c8;
+    font-size: 1em;
+    line-height: 1.6em;
+    text-align: center;
+    font-weight: 400;
+}
+
 a {
     color: #c8c8c8;
 }
@@ -183,7 +192,8 @@ header li a:hover {
     margin: 0;
     width: 100%;
 }
-.details .details-container{
+
+.details .details-container {
     padding: 0 5%;
 }
 
@@ -267,7 +277,7 @@ header li a:hover {
     width: 100%;
 }
 
-.explain .explain-container{
+.explain .explain-container {
     padding: 0 5%;
 }
 
@@ -279,7 +289,6 @@ header li a:hover {
     float: left;
     width: 50%;
 }
-
 
 .explain section .explain-img {
     max-width: 350px;
@@ -355,6 +364,98 @@ header li a:hover {
 .describe section h2, .describe section p {
     text-align: left;
     padding: 2% 0;
+}
+
+.description {
+    background: #161616;
+    width: 100%;
+    padding: 10% 0;
+}
+
+.description .description-container {
+    padding: 0 5%;
+}
+
+.description section {
+    float: left;
+    width: 50%;
+}
+
+.description section .video-container {
+    width: 90%;
+    margin: auto;
+}
+
+.video-wrap {
+    height: auto;
+}
+
+.description section iframe {
+    display: block;
+    max-width: 100%;
+}
+
+.description section h2, .description section p {
+    text-align: left;
+    padding: 2% 0;
+}
+
+.feedbacks {
+    width: 100%;
+    height: 80%;
+    background: url("../img/bg-2.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    width: 100%;
+}
+
+.feedbacks .slider-container {
+    padding: 10% 5%;
+}
+
+.slider-container .slide {
+    width: 65%;
+    margin: auto;
+   // position: relative;
+
+}
+
+.slide .slide-item {
+    display: none;
+    /*position: absolute;
+    top: 0;
+    border: 0;*/
+}
+
+.slide .active {
+    display: block;
+}
+
+.slide h3, .slide h4 {
+    text-align: center;
+    color: #ffffff;
+}
+.slide .white-line{
+    border-top: 1px solid #ffffff;
+    width: 35%;
+    margin: auto;
+}
+
+.slide p {
+    text-align: center;
+    color: #ffffff;
+    padding: 2% 0;
+}
+
+.slide img {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
 }
 
 @media screen and (max-width: 768px) {
