@@ -34,6 +34,9 @@ function Gallery(sSelector) {
     //g.preview = g.find('.preview-img');
     g.previewImage = g.find('.preview-img');
     g.previewBox = g.find('.screenshots-preview');
+
+    g.slideList = g.find('.slider-screenshots');
+
     g.current = 0;
     g.max = g.pictures.length;
 
@@ -118,11 +121,19 @@ function Gallery(sSelector) {
         g.closePreview();
     });
 
-    /*g.pointItem.click(function () {
-            var picture = $(this);
-            g.display(picture, 'point');
+    g.pointItem.click(function () {
+            var list = $(this);
+            //g.display(picture, 'point');
+           var currList =  g.pointItem.index(list);
+            //alert(currList)
+            g.setList(currList)
         }
-    );*/
+    );
+    g.setList = function(id){
+        g.slideList.eq(id).addClass('center');
+        g.slideList.eq(id+1).addClass('offset-left');
+        g.slideList.eq(id-1).addClass('offset-right');
+    }
 
     g.pictures.click(g.showPreview);
 
