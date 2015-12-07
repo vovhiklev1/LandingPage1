@@ -29,7 +29,6 @@ $(document).ready(function () {
         ;
     };
 
-
     var onScrollPresent = function () {
         var scrollTop = $("body").scrollTop();
 
