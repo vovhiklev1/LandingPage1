@@ -7,7 +7,7 @@ $(document).ready(function () {
         onScrollEvent();
         onScrollPresent();
     });
-    /*$(window).mousemove(function(event){
+   /* $(window).mousemove(function(event){
      onMouseEvent(event);
      });*/
 
