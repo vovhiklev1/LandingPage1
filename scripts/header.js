@@ -1,13 +1,14 @@
 /**
  * Created by Vova on 04.12.2015.
  */
-$(document).ready(function () {
+var headerAnimate = function () {
+
     var header = $('header');
     $(document).scroll(function () {
         onScrollEvent();
         onScrollPresent();
     });
-   /* $(window).mousemove(function(event){
+    /* $(window).mousemove(function(event){
      onMouseEvent(event);
      });*/
 
@@ -36,16 +37,19 @@ $(document).ready(function () {
             scrollTop = 50
         } else {
             scrollTop
-        };
+        }
+        ;
 
         if ($(".present-image").height() + $(".present-image").offset().top >= $(".present").height()
             && $(".present-image").height() + $(".present-image").offset().top + scrollTop >= $(".present").height()) {
             $(".present-image").stop().animate({top: -scrollTop}, 500);
-        };
+        }
+        ;
 
         if ($(".present-image").height() + $(".present-image").offset().top <= $(".present").height()
             && $(".present-image").height() + $(".present-image").offset().top + scrollTop <= $(".present").height()) {
             $(".present-image").stop().animate({top: scrollTop}, 500);
-        };
+        }
+        ;
     };
-});
+};
