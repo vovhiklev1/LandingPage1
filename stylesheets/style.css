@@ -45,7 +45,7 @@ h4 {
 }
 
 a {
-    color: #c8c8c8;
+    color: #aeaeae;
 }
 
 p, i {
@@ -113,7 +113,10 @@ header li a {
 
 }
 
-header li a:hover {
+header li a:hover, header li a .nav_active {
+    color: #fff;
+}
+header li  .nav_active {
     color: #fff;
 }
 

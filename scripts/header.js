@@ -8,12 +8,12 @@ var headerAnimate = function () {
         onScrollEvent();
         onScrollPresent();
     });
-    /* $(window).mousemove(function(event){
+     $(window).mousemove(function(event){
      onMouseEvent(event);
-     });*/
+     });
 
     var onScrollEvent = function () {
-        if ($(document).scrollTop() >= 100) {
+        if ($(document).scrollTop() >= 50) {
             header.stop().animate({top: '0px'}, 'slow');
         } else {
             header.stop().animate({top: '-100px'}, 'slow');
@@ -21,10 +21,10 @@ var headerAnimate = function () {
         ;
     };
     var onMouseEvent = function (event) {
-        if (event.clientY <= 50) {
+        if (event.clientY <= 50 ) {
             header.stop().animate({top: '0px'}, 'fast');
         }
-        if (event.clientY >= 100) {
+        if (event.clientY >= 100 && $(document).scrollTop() <= 50) {
             header.stop().animate({top: '-100px'}, 'fast');
         }
         ;
