@@ -4,13 +4,27 @@
 var headerAnimate = function () {
 
     var header = $('header');
+    var child = $('body').children();
+    var head = $('header').find('nav ul li a[href]');
+    var windowWidth = $(this).width();
+    var windowHeight = $(this).height() / 2;
+
+    var del_nav_active = function () {
+        $.each(head, function (i, data) {
+            head.eq(i).removeClass('nav_active');
+
+        });
+    };
+
     $(document).scroll(function () {
         onScrollEvent();
         onScrollPresent();
+        navigatePage();
     });
-     $(window).mousemove(function(event){
-     onMouseEvent(event);
-     });
+
+    $(window).mousemove(function (event) {
+        onMouseEvent(event);
+    });
 
     var onScrollEvent = function () {
         if ($(document).scrollTop() >= 50) {
@@ -21,7 +35,7 @@ var headerAnimate = function () {
         ;
     };
     var onMouseEvent = function (event) {
-        if (event.clientY <= 50 ) {
+        if (event.clientY <= 50) {
             header.stop().animate({top: '0px'}, 'fast');
         }
         if (event.clientY >= 100 && $(document).scrollTop() <= 50) {
@@ -52,4 +66,55 @@ var headerAnimate = function () {
         }
         ;
     };
+
+    var navigatePage = function () {
+        $.each(child, function (id, value) {
+            var obj = $('body').find(child[id]);
+            var top = obj.position().top;
+            var h = obj.height();
+            var pos = top + h;
+            if ($(document).scrollTop() + 20 > top && $(document).scrollTop() < pos) {
+                $.each(head, function (i, data) {
+                    if (head.eq(i).attr('href').replace('#', '') == obj.attr('id')) {
+                        del_nav_active();
+                        head.eq(i).addClass('nav_active');
+
+
+                    }
+                });
+            }
+            ;
+
+            if ($(document).scrollTop() + windowHeight + (windowHeight / 3) > top) {
+
+                if (obj.attr('id') == 'explain' || obj.attr('id') == 'description') {
+                    thirdAnimation(obj.attr('id')); //console.log('3')
+                }
+
+                if (obj.attr('id') == 'details' || obj.attr('id') == 'feedbacks'
+                    || obj.attr('id') == 'articles'
+                    || obj.attr('id') == 'screenshots' || obj.attr('id') == 'message') {
+                    firstAnimation(obj.attr('id')); //console.log('1')
+                }
+
+                if (obj.attr('id') == 'describe' || obj.attr('id') == 'subscribe') {
+                    secondAnimation(obj.attr('id')); //console.log('2')
+                }
+            }
+            ;
+        });
+    };
+
+    var thirdAnimation = function (objName) {
+        $('#' + objName).find('.offset-block-left-onload').animate({left: 0}, 1800);
+        $('#' + objName).find('.offset-block-right-onload').animate({right: 0}, 1800);
+    };
+    var firstAnimation = function (objName) {
+        $('#' + objName).find('.opacity-block-onload').animate({opacity: 1}, 1000);
+    };
+    var secondAnimation = function (objName) {
+        $('#' + objName).find('.inner-offset-block-left-onload').animate({left: 0}, 1800);
+        $('#' + objName).find('.inner-offset-block-right-onload').animate({right: 0}, 1800);
+    };
+
 };

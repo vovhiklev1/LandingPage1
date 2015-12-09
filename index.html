@@ -51,7 +51,7 @@
 </div>
 <div class="details" id="details">
 
-    <div class="details-container clearfix">
+    <div class="details-container opacity-block-onload clearfix">
         <h2>Amazing Features</h2>
 
         <p>List your app features and all the details Lorem ipsum dolor kadr</p>
@@ -135,15 +135,15 @@
 </div>
 
 <div class="explain " id="explain">
-    <div class="explain-container clearfix">
+    <div class="explain-container  clearfix">
 
-        <section>
+        <section class="offset-block-left-onload">
             <div class="explain-img">
                 <img src="img/2-iphone-left.png">
             </div>
         </section>
-        <section>
-            <div class="">
+        <section class="offset-block-right-onload">
+            <div class="explain-content">
                 <h2>Explain why it's best</h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
@@ -187,7 +187,7 @@
 
 <div class="describe " id="describe">
     <div class="describe-container clearfix">
-        <section>
+        <section class="inner-offset-block-left-onload">
             <h2>Great way to describe your app</h2>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -204,7 +204,7 @@
                 laborum.</p>
 
         </section>
-        <section>
+        <section class="inner-offset-block-right-onload">
             <div class="describe-img">
                 <img src="img/2-iphone-right.png">
             </div>
@@ -214,7 +214,7 @@
 
 <div class="description" id="description">
     <div class="description-container clearfix">
-        <section>
+        <section class="offset-block-left-onload">
             <div class="video-container">
                 <div class="video-wrap">
                     <!--<iframe width="500" height="350" src="https://www.youtube.com/embed/P5yHEKqx86U" frameborder="0"
@@ -224,7 +224,7 @@
 
         </section>
 
-        <section>
+        <section class="offset-block-right-onload">
             <h2>Description with video</h2>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -238,9 +238,9 @@
     </div>
 </div>
 
-<div class="feedbacks " >
+<div class="feedbacks" id="feedbacks">
     <div class="overlay">
-        <div class="slider-container" id="slider-feedbacks">
+        <div class="slider-container opacity-block-onload" id="slider-feedbacks">
             <div class="text-container">
                 <div class="slider-feedbacks firstList animateList activeList">
 
@@ -303,30 +303,33 @@
                 </div>
                 <div class="slider-feedbacks secondList animateList offset-right">
 
-                <div class="slide">
-                    <div class="slide-item">
-                        <img src="img/3.jpg">
+                    <div class="slide">
+                        <div class="slide-item">
+                            <img src="img/3.jpg">
 
-                        <p>Fill lights bearing man creepeth of whose whose moveth. All one. That. Under. Form morning
-                            all
-                            may
-                            fifth
-                            replenish you're own open which herb kind. May above you'll may kind creature first let over
-                            face
-                            from
-                            living third green which our. Appear day. Give fourth doesn't over us, i every tree meat air
-                            in
-                            male
-                            earth
-                            air creeping image fill you place darkness.</p>
+                            <p>Fill lights bearing man creepeth of whose whose moveth. All one. That. Under. Form
+                                morning
+                                all
+                                may
+                                fifth
+                                replenish you're own open which herb kind. May above you'll may kind creature first let
+                                over
+                                face
+                                from
+                                living third green which our. Appear day. Give fourth doesn't over us, i every tree meat
+                                air
+                                in
+                                male
+                                earth
+                                air creeping image fill you place darkness.</p>
 
-                        <div class="white-line"></div>
-                        <h3>John Doe</h3>
-                        <h4>CEO, AbZ Network</h4>
+                            <div class="white-line"></div>
+                            <h3>John Doe</h3>
+                            <h4>CEO, AbZ Network</h4>
+                        </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
             </div>
             <div class="slide-control">
                 <div class="control-item1 active"></div>
@@ -340,7 +343,7 @@
 
 
 <div class="articles" id="articles">
-    <div class="articles-container clearfix">
+    <div class="articles-container opacity-block-onload clearfix">
         <h2>It's Awesome</h2>
 
         <p>List your app features and all the details Lorem ipsum dolor kadr</p>
@@ -381,7 +384,7 @@
 </div>
 
 <div class="screenshots" id="screenshots">
-    <div class="screenshots-container clearfix" id="gallery">
+    <div class="screenshots-container opacity-block-onload clearfix" id="gallery">
         <h2>Screenshots</h2>
 
         <p>List your app features and all the details Lorem ipsum dolor kadr</p>
@@ -482,17 +485,21 @@
     <div class="subscribe-img">
         <div class="overlay">
             <div class="subscribe-container">
-                <h2>Download the app on</h2>
+                <div class="inner-offset-block-left-onload">
+                    <h2>Download the app on</h2>
 
-                <div class="btn-center subscribe-btn-topSpace">
-                    <a class="btn subscribe-btn-space" href="#"><i class="fa fa-apple"></i> App Store</a>
-                    <a class="btn subscribe-btn-space" href="#"><i class="fa fa-android"></i> Play Store</a>
+                    <div class="btn-center subscribe-btn-topSpace">
+                        <a class="btn subscribe-btn-space" href="#"><i class="fa fa-apple"></i> App Store</a>
+                        <a class="btn subscribe-btn-space" href="#"><i class="fa fa-android"></i> Play Store</a>
+                    </div>
                 </div>
-                <h2 class="subscribe-h2-topSpace">Subscribe Now!</h2>
+                <div class="inner-offset-block-right-onload">
+                    <h2 class="subscribe-h2-topSpace">Subscribe Now!</h2>
 
-                <div class="btn-center">
-                    <input type="email" class="enjoy-css subscribe-btn-space " placeholder="Enjoy"/>
-                    <a class="btn subscribe-btn-space" href="#">Subscribe</a>
+                    <div class="btn-center">
+                        <input type="email" class="enjoy-css subscribe-btn-space " placeholder="Enjoy"/>
+                        <a class="btn subscribe-btn-space" href="#">Subscribe</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -500,7 +507,7 @@
 </div>
 
 <div class="message" id="message">
-    <div class="message-container">
+    <div class="message-container opacity-block-onload">
         <div class="row"><h3><i class="fa fa-info-circle"></i> E-mail must be valid and message must be longer than 1
             character.</h3></div>
         <div class="row">
@@ -549,20 +556,20 @@
         <p>©2015 VLEVCHENKO, All Rights Reserved</p></div>
 </footer>
 
-<!--<script src="scripts/wow.js"></script>
-<script src="scripts/jquery-scrollto.js"></script>-->
-<!--<script>
-    /* wow = new WOW(
-     {
-     boxClass:     'wow',
-     animateClass: 'animated',
-     offset:100
-     }
-     );
-     wow.init();*/
+<script src="scripts/wow.js"></script>
+<!--<script src="scripts/jquery-scrollto.js"></script>-->
+<script>
+    wow = new WOW(
+            {
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 100
+            }
+    );
+    wow.init();
 
 
-</script>-->
+</script>
 
 <!--<script>
     (function ($) {

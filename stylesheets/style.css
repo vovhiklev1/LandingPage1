@@ -13,7 +13,7 @@ html, body {
     margin-right: 0;
 }
 
-{
+ {
     outline: 1px solid red
 }
 
@@ -77,7 +77,7 @@ header {
     -moz-transition-delay: 0.5s;
     transition: .3s ease-out;
     transition-delay: 0.5s;
-z-index: 100;
+    z-index: 100;
 }
 
 #logo {
@@ -116,7 +116,8 @@ header li a {
 header li a:hover, header li a .nav_active {
     color: #fff;
 }
-header li  .nav_active {
+
+header li .nav_active {
     color: #fff;
 }
 
@@ -285,7 +286,33 @@ header li  .nav_active {
 .explain section {
     float: left;
     width: 50%;
+
 }
+
+.offset-block-left-onload {
+    position: relative;
+    left: -4%;
+}
+
+.offset-block-right-onload {
+    position: relative;
+    right: -4%;
+}
+.opacity-block-onload{
+    opacity: 0;
+}
+
+.inner-offset-block-left-onload {
+    position: relative;
+    left: 4%;
+}
+
+.inner-offset-block-right-onload{
+    position: relative;
+    right: 4%;
+}
+
+
 
 .explain section .explain-img {
     max-width: 350px;
@@ -426,13 +453,11 @@ header li  .nav_active {
 
 }
 
-
 .feedbacks .slider-container .text-container .slide {
     width: 65%;
     margin: auto;
 
 }
-
 
 .feedbacks .slider-container .text-container .slide h3, .slide h4 {
     text-align: center;
@@ -483,7 +508,6 @@ header li  .nav_active {
     background: #ffffff;
 }
 
-
 .articles {
     background: #222222;
     width: 100%;
@@ -530,7 +554,7 @@ header li  .nav_active {
     background: #161616;
     margin: 0;
     width: 100%;
-    padding: 5% 0;
+    padding: 5% 0 5% 0;
 }
 
 .screenshots .screenshots-container {
@@ -539,12 +563,12 @@ header li  .nav_active {
 }
 
 .screenshots .screenshots-container .slider-container {
-    padding-top: 5%;
+    //padding-top: 5%;
     position: relative;
-    height: 450px;
+    height: 470px;
 
     overflow: hidden;
-    border: 1px solid green;
+    //border: 1px solid green;
 
 }
 

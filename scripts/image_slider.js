@@ -5,7 +5,7 @@
 
 function Gallery(sSelector) {
     var g = this;
-    g.main =function(sSelector){
+    g.main = function (sSelector) {
         g.init(sSelector);
         g.pictures = g.find('.slide-item');
         g.arrowPrew = g.find('.control-left');
@@ -110,12 +110,17 @@ function Gallery(sSelector) {
         g.arrowPrew.click(g.showPrevious);
         g.arrowNext.click(g.showNext);
         document.addEventListener('keydown', function (event) {
-            if (event.which == 37) {
-                g.showPrevious();
-            }
-            ;
-            if (event.which == 39) {
-                g.showNext();
+            if (($(document).scrollTop() >= $('#screenshots').position().top - 100) &&
+                (($(document).scrollTop() <= $('#screenshots').position().top + $('#screenshots').height()))) {
+
+                if (event.which == 37) {
+                    g.showPrevious();
+                }
+                ;
+                if (event.which == 39) {
+                    g.showNext();
+                }
+                ;
             }
             ;
         });
