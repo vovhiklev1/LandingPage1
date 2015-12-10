@@ -9,6 +9,29 @@ var headerAnimate = function () {
     var windowWidth = $(this).width();
     var windowHeight = $(this).height() / 2;
 
+    var menu = $('#menu');
+
+    var menuIcon = $('#menu-icon');
+    menuIcon.bind('click', function () {
+        menu.slideToggle();
+    });
+
+    var menuLink = $('#menu a');
+    menuLink.on("click", function () {
+        menu.slideUp();
+    });
+
+    var body = $('body');
+    body.bind('click', function (event) {
+            var e = $(event.target);
+            if (!(e.hasClass('menu-row') || e.hasClass('icon')
+                || e.hasClass('lines') || e.hasClass('menu-icon') )) {
+                menu.slideUp();
+            }
+        }
+    );
+
+
     var del_nav_active = function () {
         $.each(head, function (i, data) {
             head.eq(i).removeClass('nav_active');
@@ -17,13 +40,13 @@ var headerAnimate = function () {
     };
 
     $(document).scroll(function () {
-        onScrollEvent();
+        //onScrollEvent();
         onScrollPresent();
         navigatePage();
     });
 
     $(window).mousemove(function (event) {
-        onMouseEvent(event);
+        // onMouseEvent(event);
     });
 
     var onScrollEvent = function () {

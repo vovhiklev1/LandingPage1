@@ -14,7 +14,7 @@ $(document).ready(function () {
             clearInterval(this.slideTimerStart.sliderTimer);
         },
         navPageTo: function () {
-            $('a[href^="#"]').click(function () {
+            $('#menu a[href^="#"]').click(function () {
                 var el = $(this).attr('href');
                 $('body').animate({
                     scrollTop: $(el).offset().top
@@ -25,9 +25,11 @@ $(document).ready(function () {
     };
 
     var boxSizeFix = function () {
-        var imgHeight = $('.b-picture__image').height();
-        $('.screenshots .screenshots-container .slider-container').height(imgHeight + 50);
-        $('.screenshots').height($(this).height());
+        window.onload = (function () {
+            $('.screenshots').height($(window).height());
+            var imgHeight = $('.b-picture__image').height();
+            $('.screenshots .screenshots-container .slider-container').height(imgHeight + 50);
+        });
     };
 
 

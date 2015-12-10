@@ -13,7 +13,7 @@ html, body {
     margin-right: 0;
 }
 
- {
+* {
     outline: 1px solid red
 }
 
@@ -64,7 +64,7 @@ ul {
 
 header {
     position: fixed;
-    top: -100px;
+/ / top : - 100 px;
     left: 0;
     width: 100%;
     background: #111111;
@@ -94,7 +94,49 @@ header {
 
 }
 
+header .mobile-menu-container {
+    display: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+    width: 76px;
+    height: 58px;
+}
+
+header .mobile-menu-container .menu-icon {
+    width: 44px;
+    height: 36px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #333333;
+    background: #111111;
+    box-sizing: border-box;
+}
+
+header .mobile-menu-container .menu-icon:hover {
+    background: #333333;
+}
+
+header .mobile-menu-container .menu-icon .icon .lines {
+    width: 22px;
+    height: 26px;
+    margin: 5px 11px;
+}
+
+header .mobile-menu-container .menu-icon .icon .lines div {
+    width: 22px;
+    height: 2px;
+    margin: 3px 0;
+    float: left;
+    clear: both;
+    background: #ffffff;
+
+}
+
 header ul {
+/ / display : none;
+    max-width: 80%;
+
     list-style: none;
     float: right;
     margin: 0;
@@ -298,7 +340,8 @@ header li .nav_active {
     position: relative;
     right: -4%;
 }
-.opacity-block-onload{
+
+.opacity-block-onload {
     opacity: 0;
 }
 
@@ -307,12 +350,10 @@ header li .nav_active {
     left: 4%;
 }
 
-.inner-offset-block-right-onload{
+.inner-offset-block-right-onload {
     position: relative;
     right: 4%;
 }
-
-
 
 .explain section .explain-img {
     max-width: 350px;
@@ -563,21 +604,17 @@ header li .nav_active {
 }
 
 .screenshots .screenshots-container .slider-container {
-    //padding-top: 5%;
+/ / padding-top : 5 %;
     position: relative;
-    height: 470px;
-
+/ / max-height : 470 px;
     overflow: hidden;
-    //border: 1px solid green;
-
+/ / border : 1 px solid green;
 }
 
 .screenshots .slider-screenshots {
-
     position: absolute;
     clear: both;
     width: 100%;
-
 }
 
 .activeList {
@@ -973,13 +1010,85 @@ footer .footer-container p {
 }
 
 @media screen and (max-width: 768px) {
-    .present {
+    /*.present {
         height: 550px;
+    }*/
+    body {
+        color: red;
     }
 
-    body {
-        color: red
+    h1, h2 {
+        font-size: 1.6em;
+        line-height: 1.6em;
+        font-weight: 200;
     }
+
+    h3 {
+        font-size: 1.2em;
+        line-height: 1.6em;
+        font-weight: 400;
+    }
+
+    h4 {
+        font-size: 1em;
+        line-height: 1.6em;
+        font-weight: 400;
+    }
+
+    a {
+    }
+
+    p, i {
+        font-size: 1em;
+        line-height: 1.6em;
+        font-weight: 300;
+    }
+
+    header {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    #logo {
+        margin: 2% 0 1% 4%;
+    }
+
+    header .mobile-menu-container {
+        display: block;
+    }
+
+    header ul {
+        margin: 50px 0 0 0;
+        display: none;
+    }
+
+    header li {
+        display: inline-block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        float: left;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    header li a {
+        display: inline-block;
+        width: 80%;
+        padding: 2% 15px;
+    }
+
+    .present h1 {
+        padding-top: 150px;
+    }
+
+    .present p {
+        font-size: 1em;
+    }
+
+    .present {
+    / / height : 800 px;
+    }
+
 }
 
 /*
