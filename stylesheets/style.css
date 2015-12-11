@@ -94,7 +94,8 @@ header {
 
 }
 
-header .mobile-menu-container { position: relative;
+header .mobile-menu-container {
+    position: relative;
     display: none;
     padding: 0;
     margin: 0;
@@ -103,7 +104,9 @@ header .mobile-menu-container { position: relative;
     height: 58px;
 }
 
-header .mobile-menu-container .menu-icon { position: absolute; z-index: 3;
+header .mobile-menu-container .menu-icon {
+    position: absolute;
+    z-index: 3;
     width: 44px;
     height: 36px;
     margin: 10px 10px;
@@ -112,7 +115,8 @@ header .mobile-menu-container .menu-icon { position: absolute; z-index: 3;
     background: #111111;
     box-sizing: border-box;
 }
-header .mobile-menu-container .menu-icon .icon{
+
+header .mobile-menu-container .menu-icon .icon {
     pointer-events: none;
 }
 
@@ -986,6 +990,36 @@ header li .nav_active {
     opacity: 1;
 }
 
+
+
+.b-form__message {
+    display: none;
+}
+
+.b-textfield_error::-webkit-input-placeholder {
+    color: red;
+}
+
+.b-textfield_error:-moz-placeholder { /* Firefox 18- */
+    color: red;
+}
+
+.b-textfield_error::-moz-placeholder {  /* Firefox 19+ */
+    color: red;
+}
+
+.b-textfield_error:-ms-input-placeholder {
+    color: red;
+}
+
+.b-textfield_error {
+    color: red;
+}
+
+.b-textfield_ok {
+    color: #505050;
+}
+
 footer {
     background: #232323;
 
@@ -1119,15 +1153,16 @@ footer .footer-container p {
     }
 
     .feedbacks {
-     //   min-height: 400px;
+    / / min-height : 400 px;
     }
 
     .screenshots .slide {
         float: left;
         width: 100%;
     }
+
     .screenshots .slide:not(:first-child) {
-       display: none;
+        display: none;
     }
 
     .screenshots .slide .slide-item img {
@@ -1136,7 +1171,8 @@ footer .footer-container p {
     }
 
     .screenshots .slide .slide-item .item {
-        width: 100%; margin: auto;
+        width: 100%;
+        margin: auto;
     }
 
     .message .message-container {

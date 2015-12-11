@@ -3,7 +3,6 @@
  */
 
 function List(sSelector) {
-
     var g = this;
 
     g.main = function (sSelector) {

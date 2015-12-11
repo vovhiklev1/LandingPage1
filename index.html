@@ -227,8 +227,8 @@
         <section class="offset-block-left-onload">
             <div class="video-container">
                 <div class="video-wrap">
-                    <iframe width="500" height="350" src="https://www.youtube.com/embed/P5yHEKqx86U" frameborder="0"
-                            allowfullscreen></iframe>
+                   <!-- <iframe width="500" height="350" src="https://www.youtube.com/embed/P5yHEKqx86U" frameborder="0"
+                            allowfullscreen></iframe>-->
                 </div>
             </div>
 
@@ -518,24 +518,24 @@
 
 <div class="message" id="message">
     <div class="message-container opacity-block-onload">
-        <div class="row"><h3><i class="fa fa-info-circle"></i> E-mail must be valid and message must be longer than 1
+        <div class="row"><h3 class="b-form__message"><i class="fa fa-info-circle"></i> E-mail must be valid and message must be longer than 1
             character.</h3></div>
         <div class="row">
             <div class="message-input">
-                <div class="input-left"><input input type="text" class="enjoy-css message-mod-text"
+                <div class="input-left"><input input type="text" name="name" class="enjoy-css message-mod-text b-textfield"
                                                placeholder="Your Name"></div>
-                <div class="input-right"><input input type="email" class="enjoy-css message-mod-text"
+                <div class="input-right"><input input type="email" name="email"  class="enjoy-css message-mod-text b-textfield"
                                                 placeholder="Your Email"></div>
             </div>
         </div>
         <div class="row">
-            <input type="text" class="enjoy-css message-mod-text" placeholder="Subject">
+            <input type="text" name="subject" class="enjoy-css message-mod-text b-textfield" placeholder="Subject">
         </div>
         <div class="row textarea-row">
-            <textarea class="enjoy-css message-mod-text " placeholder="Message"></textarea>
+            <textarea class="enjoy-css message-mod-text b-textfield" name="message" placeholder="Message"></textarea>
         </div>
         <div class="row">
-            <div class="btn-center"><a class="btn" href="#">Send Message</a></div>
+            <div class="btn-center"><a class="btn b-form__ok-button" href="#">Send Message</a></div>
         </div>
 
 
@@ -597,7 +597,7 @@
 <script src="scripts/image_slider.js"></script>
 <script src="scripts/list_slider.js"></script>
 <script src="scripts/autoSlide.js"></script>
-<script src="scripts/getCurrentSection.js"></script>
+<script src="scripts/formValidate.js"></script>
 <script src="scripts/init.js"></script>
 
 </body>

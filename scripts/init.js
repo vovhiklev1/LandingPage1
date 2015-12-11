@@ -58,8 +58,13 @@ $(document).ready(function () {
     Slider.prototype = new Gallery;
     var slider2 = new Slider('#gallery');
 
+    Form_checker.prototype = new Component;
+    var form_checker = new Form_checker;
+
     slider1.main('#slider-feedbacks');
     slider2.main('#gallery');
+    form_checker.main('#message');
+
     Jobs.slideTimerStart();
     Jobs.navPageTo();
     boxSizeFix();
