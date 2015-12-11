@@ -27,8 +27,23 @@ $(document).ready(function () {
     var boxSizeFix = function () {
         window.onload = (function () {
             $('.screenshots').height($(window).height());
-            var imgHeight = $('.b-picture__image').height();
-            $('.screenshots .screenshots-container .slider-container').height(imgHeight + 50);
+
+            if ($(window).width() > 768) {
+                var imgHeight = $('.b-picture__image').height();
+                $('.screenshots .screenshots-container .slider-container').height(imgHeight + 50);
+                $('#present').height($(window).height() + 100);
+                $('#feedbacks').height($(window).height() - 50);
+            }
+
+            if ($(window).width() <= 768) {
+                var containerHeight = $(window).height();
+                var containerHeight_7 = containerHeight / 7;
+                $('.b-picture__image').height(containerHeight_7 * 5);
+                $('.screenshots .screenshots-container .slider-container').height(containerHeight_7 * 6);
+                $('.screenshots').height(containerHeight_7 * 6 + 200);
+                $('.screenshots .slide .slide-item .item').width($('.screenshots .slide .slide-item img').width());
+            }
+
         });
     };
 

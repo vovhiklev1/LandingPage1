@@ -30,6 +30,7 @@ function Gallery(sSelector) {
             if (!event || $(event.target).hasClass('preview-img')) {
                 g.previewBox.removeClass('b-preview_shown');
                 g.previewImage.css({"background-size": "15%"});
+                $('header').show();
             }
         };
         g.showImage = function (iShift) {
@@ -50,7 +51,13 @@ function Gallery(sSelector) {
             ;
             dirImg = allImgSlider.attr('src');
             g.previewImage.css('background-image', 'url("' + dirImg + '")');
-            g.previewImage.animate({"background-size": "25%"}, 200);
+            if ($(window).width() <= 768) {
+                g.previewImage.animate({"background-size": "70%"}, 200);
+            }
+            else {
+                g.previewImage.animate({"background-size": "25%"}, 200);
+            }
+            $('header').hide();
             g.previewBox.addClass('b-preview_shown');
         };
         g.showPrevious = function () {

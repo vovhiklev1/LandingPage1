@@ -18,14 +18,16 @@ var headerAnimate = function () {
 
     var menuLink = $('#menu a');
     menuLink.on("click", function () {
-        menu.slideUp();
+        if ($('.mobile-menu-container').css('display') == 'block') {
+            menu.slideUp();
+        }
     });
 
     var body = $('body');
     body.bind('click', function (event) {
             var e = $(event.target);
-            if (!(e.hasClass('menu-row') || e.hasClass('icon')
-                || e.hasClass('lines') || e.hasClass('menu-icon') )) {
+            if (!( e.hasClass('menu-icon') )
+                && ($('.mobile-menu-container').css('display') == 'block') ) {
                 menu.slideUp();
             }
         }
@@ -40,13 +42,13 @@ var headerAnimate = function () {
     };
 
     $(document).scroll(function () {
-        //onScrollEvent();
+       // onScrollEvent();
         onScrollPresent();
         navigatePage();
     });
 
     $(window).mousemove(function (event) {
-        // onMouseEvent(event);
+         //onMouseEvent(event);
     });
 
     var onScrollEvent = function () {

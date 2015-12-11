@@ -13,7 +13,7 @@ html, body {
     margin-right: 0;
 }
 
-* {
+{
     outline: 1px solid red
 }
 
@@ -77,7 +77,7 @@ header {
     -moz-transition-delay: 0.5s;
     transition: .3s ease-out;
     transition-delay: 0.5s;
-    z-index: 100;
+    z-index: 1;
 }
 
 #logo {
@@ -94,7 +94,7 @@ header {
 
 }
 
-header .mobile-menu-container {
+header .mobile-menu-container { position: relative;
     display: none;
     padding: 0;
     margin: 0;
@@ -103,7 +103,7 @@ header .mobile-menu-container {
     height: 58px;
 }
 
-header .mobile-menu-container .menu-icon {
+header .mobile-menu-container .menu-icon { position: absolute; z-index: 3;
     width: 44px;
     height: 36px;
     margin: 10px 10px;
@@ -111,6 +111,9 @@ header .mobile-menu-container .menu-icon {
     border: 1px solid #333333;
     background: #111111;
     box-sizing: border-box;
+}
+header .mobile-menu-container .menu-icon .icon{
+    pointer-events: none;
 }
 
 header .mobile-menu-container .menu-icon:hover {
@@ -812,7 +815,6 @@ header li .nav_active {
 .subscribe {
     margin: 0;
     width: 100%;
-
 }
 
 .subscribe .subscribe-img {
@@ -1010,32 +1012,11 @@ footer .footer-container p {
 }
 
 @media screen and (max-width: 768px) {
-    /*.present {
-        height: 550px;
-    }*/
-    body {
-        color: red;
-    }
 
     h1, h2 {
-        font-size: 1.6em;
+        font-size: 2.5em;
         line-height: 1.6em;
         font-weight: 200;
-    }
-
-    h3 {
-        font-size: 1.2em;
-        line-height: 1.6em;
-        font-weight: 400;
-    }
-
-    h4 {
-        font-size: 1em;
-        line-height: 1.6em;
-        font-weight: 400;
-    }
-
-    a {
     }
 
     p, i {
@@ -1089,6 +1070,82 @@ footer .footer-container p {
     / / height : 800 px;
     }
 
+    .details .details-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .details section {
+        width: 100%;
+        margin: auto;
+    }
+
+    .details section .details-img img {
+        width: 80%;
+        padding: 0 10%;
+    }
+
+    .details section ul li {
+        width: 80%;
+        padding: 5% 10%;
+    }
+
+    .details .details-left {
+        float: left;
+        text-align: left;
+    }
+
+    .details .icon-container-left {
+        float: left;
+        text-align: left;
+    }
+
+    .details .details-left > p, .details .details-left > h3 {
+        text-align: left;
+    }
+
+    .explain section, .describe section, .description section, .articles article {
+        width: 100%;
+        padding: 5% 0;
+    }
+
+    .description section .video-container {
+        width: 100%;
+    }
+
+    .description section iframe {
+        margin: auto;
+        width: 100%;
+    }
+
+    .feedbacks {
+     //   min-height: 400px;
+    }
+
+    .screenshots .slide {
+        float: left;
+        width: 100%;
+    }
+    .screenshots .slide:not(:first-child) {
+       display: none;
+    }
+
+    .screenshots .slide .slide-item img {
+        width: auto;
+
+    }
+
+    .screenshots .slide .slide-item .item {
+        width: 100%; margin: auto;
+    }
+
+    .message .message-container {
+        width: 80%;
+    }
+
+    .message .message-container .row textarea {
+        width: auto;
+    }
 }
 
 /*
