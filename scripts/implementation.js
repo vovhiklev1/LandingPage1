@@ -12,14 +12,14 @@ var pageAnimate = function () {
 
     var menu = $('#menu');
 
-    //Клавиша меню для  mobile-first
+    //РљР»Р°РІРёС€Р° РјРµРЅСЋ РґР»СЏ  mobile-first
     // Menu button for mobile-first
     var menuIcon = $('#menu-icon');
     menuIcon.bind('click', function () {
         menu.slideToggle();
     });
 
-    //Обработчик закрытия mobile-first меню
+    //РћР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РєСЂС‹С‚РёСЏ mobile-first РјРµРЅСЋ
     //Handler for closing mobile-first menu
     var menuLink = $('#menu a');
     menuLink.on("click", function () {
@@ -28,7 +28,7 @@ var pageAnimate = function () {
         }
     });
 
-    //Обработчик закрытия mobile-first меню если пользователь кликнул вне меню
+    //РћР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РєСЂС‹С‚РёСЏ mobile-first РјРµРЅСЋ РµСЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РєР»РёРєРЅСѓР» РІРЅРµ РјРµРЅСЋ
     //Handler for closing mobile-first menu when the user clicks outside the menu
     var body = $('body');
     body.bind('click', function (event) {
@@ -40,7 +40,7 @@ var pageAnimate = function () {
         }
     );
 
-    //Приведение цвета по умолчанию пункта меню
+    //РџСЂРёРІРµРґРµРЅРёРµ С†РІРµС‚Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РїСѓРЅРєС‚Р° РјРµРЅСЋ
     //Lead to default color a menu item
     var del_nav_active = function () {
         $.each(head, function (i, data) {
@@ -52,15 +52,15 @@ var pageAnimate = function () {
 
     $(document).scroll(function () {
         // onScrollEvent();
-        onScrollPresent(); //Анимация фона //Background animation
-        navigatePage();  //Подсветка активного пункта меню //Lighting the active menu item
+        onScrollPresent(); //РђРЅРёРјР°С†РёСЏ С„РѕРЅР° //Background animation
+        navigatePage();  //РџРѕРґСЃРІРµС‚РєР° Р°РєС‚РёРІРЅРѕРіРѕ РїСѓРЅРєС‚Р° РјРµРЅСЋ //Lighting the active menu item
     });
 
     $(window).mousemove(function (event) {
         //onMouseEvent(event);
     });
 
-    // Показать\Скрыть меню бар полностью
+    // РџРѕРєР°Р·Р°С‚СЊ\РЎРєСЂС‹С‚СЊ РјРµРЅСЋ Р±Р°СЂ РїРѕР»РЅРѕСЃС‚СЊСЋ
     // Show\Hide the menu bar completely
     var onScrollEvent = function () {
         if ($(document).scrollTop() >= 50) {
@@ -71,7 +71,7 @@ var pageAnimate = function () {
         ;
     };
 
-    // Показать\Скрыть меню бар полностью
+    // РџРѕРєР°Р·Р°С‚СЊ\РЎРєСЂС‹С‚СЊ РјРµРЅСЋ Р±Р°СЂ РїРѕР»РЅРѕСЃС‚СЊСЋ
     // Show\Hide the menu bar completely
     var onMouseEvent = function (event) {
         if (event.clientY <= 50) {
@@ -83,7 +83,7 @@ var pageAnimate = function () {
         ;
     };
 
-    //Анимация фона
+    //РђРЅРёРјР°С†РёСЏ С„РѕРЅР°
     // Background animation
     var onScrollPresent = function () {
         var scrollTop = $("body").scrollTop();
@@ -108,7 +108,7 @@ var pageAnimate = function () {
         ;
     };
 
-    //Подсветка активного пункта меню
+    //РџРѕРґСЃРІРµС‚РєР° Р°РєС‚РёРІРЅРѕРіРѕ РїСѓРЅРєС‚Р° РјРµРЅСЋ
     // Lighting the active menu item
     var navigatePage = function () {
         $.each(child, function (id, value) {

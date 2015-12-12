@@ -2,7 +2,7 @@
  * Created by Vova on 07.12.2015.
  */
 
-//Обьект слайдера
+//РћР±СЊРµРєС‚ СЃР»Р°Р№РґРµСЂР°
 //The object of the slider
 function Gallery(sSelector) {
     var g = this;
@@ -35,7 +35,7 @@ function Gallery(sSelector) {
             }
         };
 
-        //Выбор индекса изображения для полноекранного просмотра
+        //Р’С‹Р±РѕСЂ РёРЅРґРµРєСЃР° РёР·РѕР±СЂР°Р¶РµРЅРёСЏ РґР»СЏ РїРѕР»РЅРѕРµРєСЂР°РЅРЅРѕРіРѕ РїСЂРѕСЃРјРѕС‚СЂР°
         //Selecting the image index for the full-screen display
         g.showImage = function (iShift) {
             g.current += iShift;
@@ -48,7 +48,7 @@ function Gallery(sSelector) {
             g.display(g.find('.slide-item:eq(' + g.current + ')'), "preview");
         };
 
-        //Вывод полноекранного просмотра изображения слайдера
+        //Р’С‹РІРѕРґ РїРѕР»РЅРѕРµРєСЂР°РЅРЅРѕРіРѕ РїСЂРѕСЃРјРѕС‚СЂР° РёР·РѕР±СЂР°Р¶РµРЅРёСЏ СЃР»Р°Р№РґРµСЂР°
         //Displaying full-screen image slider
         g.display = function (picture, displayParam) {
             if (displayParam == "preview") {
@@ -77,7 +77,7 @@ function Gallery(sSelector) {
             g.showImage(1);
         };
 
-        //Закрыть полноекранный просмотр изображения если нажата клавиша Esc
+        //Р—Р°РєСЂС‹С‚СЊ РїРѕР»РЅРѕРµРєСЂР°РЅРЅС‹Р№ РїСЂРѕСЃРјРѕС‚СЂ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ РµСЃР»Рё РЅР°Р¶Р°С‚Р° РєР»Р°РІРёС€Р° Esc
         //Close full-screen viewing images when pressing the Esc key
         g.escclosePreview = function (event) {
             if (event.which == 27) {
@@ -88,7 +88,7 @@ function Gallery(sSelector) {
             g.closePreview();
         });
 
-        //Обработчик нажатия миниатюры слайдера
+        //РћР±СЂР°Р±РѕС‚С‡РёРє РЅР°Р¶Р°С‚РёСЏ РјРёРЅРёР°С‚СЋСЂС‹ СЃР»Р°Р№РґРµСЂР°
         //Handler clicking thumbnails slider
         g.pointItem.click(function () {
                 var list = $(this);
