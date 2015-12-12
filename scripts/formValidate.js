@@ -7,13 +7,13 @@ var page_settings = {
         , 'de': 'german'
     }
     , 'regexps': {
-        'name': '^[a-zA-Z ]{2,30}$'
+        'name': '[a-zA-Z0-9А-ЯЁа-яё\.]{2,30}'
         ,
         'email': '[^\s@]+@[^\s@]+\.[^\s@]'
         ,
-        'subject': '[a-zA-Z0-9]{1,255}'
+        'subject': '[a-zA-Z0-9А-ЯЁа-яё\.]{1,255}'
         ,
-        'message': '[a-zA-Z0-9]{1,500}'
+        'message':  '[a-zA-Z0-9А-ЯЁа-яё\.]{1,500}'
     }
 };
 
