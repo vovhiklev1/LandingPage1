@@ -4,15 +4,24 @@
 $(document).ready(function () {
 
     Jobs = {
+
+        // Запуск автоматического прослистывания слайдера
+        // Run the automatic scrolling slider
         slideTimerStart: function () {
             this.slideTimerStart.sliderTimer = setInterval(function () {
                 slider1.autoSlide();
                 slider2.autoSlide();
             }, 3000);
         },
+
+        // Остановка автоматического прослистывания слайдера
+        // Stop the automatic scrolling slider
         slideTimerStop: function () {
             clearInterval(this.slideTimerStart.sliderTimer);
         },
+
+        // Анимация перемежения по якорю
+        // Animation move through the anchor
         navPageTo: function () {
             $('#menu a[href^="#"]').click(function () {
                 var el = $(this).attr('href');
@@ -24,6 +33,8 @@ $(document).ready(function () {
         }
     };
 
+    // Изменение размера слайдера при мобильном виде
+    // Change the size of the slider in the mobile view
     var boxSizeFix = function () {
         window.onload = (function () {
             $('.screenshots').height($(window).height());
@@ -47,6 +58,8 @@ $(document).ready(function () {
         });
     };
 
+    //Главный метод анимации и обработчиков страницы
+    // Main method of animation and handlers page
     pageAnimate();
 
     List.prototype = new Component;

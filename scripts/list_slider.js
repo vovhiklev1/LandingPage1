@@ -2,6 +2,8 @@
  * Created by Vova on 08.12.2015.
  */
 
+//Обьект слайдера листов
+//The object of the list slider
 function List(sSelector) {
     var g = this;
 
@@ -13,6 +15,8 @@ function List(sSelector) {
         g.pointItemMax = g.pointItem.length;
         g.points = g.find('.slide-control');
 
+        //Обработчик нажатия миниатюры слайдера
+        //Handler clicking thumbnails slider
         g.pointItem.click(function () {
                 var list = $(this);
                 var selecteddListId = g.pointItem.index(list);
@@ -20,6 +24,8 @@ function List(sSelector) {
             }
         );
 
+        //Установка активного и скрытие неактивных листов слайдера
+        //Set the active and hide inactive slider lists sheets
         g.setList = function (selecteddListId) {
             $.each(g.slideList, function (id, value) {
                 if (selecteddListId == id) {
@@ -38,6 +44,9 @@ function List(sSelector) {
                     g.slideList.eq(id).removeClass('activeList');
                 }
             });
+
+            //Изменение активного thumbnail слайдера
+            //Change the active thumbnail slider
             $.each(g.pointItem, function (id, value) {
                 if (selecteddListId == id) {
                     g.pointItem.eq(id).addClass('active');
@@ -47,6 +56,9 @@ function List(sSelector) {
                 }
                 ;
             });
+
+            //Остановка и запуск автоматического перелистывания слайдера после изменения пользователем
+            //Stop and start the automatic scrolling of the slider after the user changes
             Jobs.slideTimerStop();
             Jobs.slideTimerStart();
         };

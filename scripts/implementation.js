@@ -1,7 +1,9 @@
 /**
  * Created by Vova on 04.12.2015.
  */
-        
+
+//Главный метод анимации и обработчиков страницы
+// Main method of animation and handlers page
 var pageAnimate = function () {
 
     var header = $('header');

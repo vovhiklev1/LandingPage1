@@ -2,8 +2,8 @@
  * Created by Vova on 07.12.2015.
  */
 
-//Обьект слайдера
-//The object of the slider
+//Обьект слайдера изображений
+//The object of the image slider
 function Gallery(sSelector) {
     var g = this;
     g.main = function (sSelector) {
@@ -97,6 +97,8 @@ function Gallery(sSelector) {
             }
         );
 
+        //Установка активного и скрытие неактивных листов слайдера
+        //Set the active and hide inactive slider lists sheets
         g.setList = function (selecteddListId) {
             $.each(g.slideList, function (id, value) {
                 if (selecteddListId == id) {
@@ -115,6 +117,9 @@ function Gallery(sSelector) {
                     g.slideList.eq(id).removeClass('activeList');
                 }
             });
+
+            //Изменение активного thumbnail слайдера
+            //Change the active thumbnail slider
             $.each(g.pointItem, function (id, value) {
                 if (selecteddListId == id) {
                     g.pointItem.eq(id).addClass('active');
@@ -124,6 +129,9 @@ function Gallery(sSelector) {
                 }
                 ;
             });
+
+            //Остановка и запуск автоматического перелистывания слайдера после изменения пользователем
+            //Stop and start the automatic scrolling of the slider after the user changes
             Jobs.slideTimerStop();
             Jobs.slideTimerStart();
         };
@@ -133,6 +141,9 @@ function Gallery(sSelector) {
         g.previewBox.click(g.closePreview);
         g.arrowPrew.click(g.showPrevious);
         g.arrowNext.click(g.showNext);
+
+        //Обработчик нажатия клавиш влево\вправо при активной позиции на слайдере
+        //Handler pressing key the the left \ right in the active position on the slider
         document.addEventListener('keydown', function (event) {
             if (($(document).scrollTop() >= $('#screenshots').position().top - 100) &&
                 (($(document).scrollTop() <= $('#screenshots').position().top + $('#screenshots').height()))) {
