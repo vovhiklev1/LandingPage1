@@ -1,7 +1,8 @@
 /**
  * Created by Vova on 04.12.2015.
  */
-var headerAnimate = function () {
+        
+var pageAnimate = function () {
 
     var header = $('header');
     var child = $('body').children();
@@ -11,11 +12,15 @@ var headerAnimate = function () {
 
     var menu = $('#menu');
 
+    //Клавиша меню для  mobile-first
+    // Menu button for mobile-first
     var menuIcon = $('#menu-icon');
     menuIcon.bind('click', function () {
         menu.slideToggle();
     });
 
+    //Обработчик закрытия mobile-first меню
+    //Handler for closing mobile-first menu
     var menuLink = $('#menu a');
     menuLink.on("click", function () {
         if ($('.mobile-menu-container').css('display') == 'block') {
@@ -23,17 +28,20 @@ var headerAnimate = function () {
         }
     });
 
+    //Обработчик закрытия mobile-first меню если пользователь кликнул вне меню
+    //Handler for closing mobile-first menu when the user clicks outside the menu
     var body = $('body');
     body.bind('click', function (event) {
             var e = $(event.target);
             if (!( e.hasClass('menu-icon') )
-                && ($('.mobile-menu-container').css('display') == 'block') ) {
+                && ($('.mobile-menu-container').css('display') == 'block')) {
                 menu.slideUp();
             }
         }
     );
 
-
+    //Приведение цвета по умолчанию пункта меню
+    //Lead to default color a menu item
     var del_nav_active = function () {
         $.each(head, function (i, data) {
             head.eq(i).removeClass('nav_active');
@@ -41,16 +49,19 @@ var headerAnimate = function () {
         });
     };
 
+
     $(document).scroll(function () {
-       // onScrollEvent();
-        onScrollPresent();
-        navigatePage();
+        // onScrollEvent();
+        onScrollPresent(); //Анимация фона //Background animation
+        navigatePage();  //Подсветка активного пункта меню //Lighting the active menu item
     });
 
     $(window).mousemove(function (event) {
-         //onMouseEvent(event);
+        //onMouseEvent(event);
     });
 
+    // Показать\Скрыть меню бар полностью
+    // Show\Hide the menu bar completely
     var onScrollEvent = function () {
         if ($(document).scrollTop() >= 50) {
             header.stop().animate({top: '0px'}, 'slow');
@@ -59,6 +70,9 @@ var headerAnimate = function () {
         }
         ;
     };
+
+    // Показать\Скрыть меню бар полностью
+    // Show\Hide the menu bar completely
     var onMouseEvent = function (event) {
         if (event.clientY <= 50) {
             header.stop().animate({top: '0px'}, 'fast');
@@ -69,6 +83,8 @@ var headerAnimate = function () {
         ;
     };
 
+    //Анимация фона
+    // Background animation
     var onScrollPresent = function () {
         var scrollTop = $("body").scrollTop();
 
@@ -92,6 +108,8 @@ var headerAnimate = function () {
         ;
     };
 
+    //Подсветка активного пункта меню
+    // Lighting the active menu item
     var navigatePage = function () {
         $.each(child, function (id, value) {
             var obj = $('body').find(child[id]);

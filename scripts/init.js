@@ -47,8 +47,7 @@ $(document).ready(function () {
         });
     };
 
-
-    headerAnimate();
+    pageAnimate();
 
     List.prototype = new Component;
     Slider.prototype = new List;
@@ -68,4 +67,5 @@ $(document).ready(function () {
     Jobs.slideTimerStart();
     Jobs.navPageTo();
     boxSizeFix();
+
 });

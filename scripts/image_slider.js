@@ -2,7 +2,8 @@
  * Created by Vova on 07.12.2015.
  */
 
-
+//Обьект слайдера
+//The object of the slider
 function Gallery(sSelector) {
     var g = this;
     g.main = function (sSelector) {
@@ -21,11 +22,11 @@ function Gallery(sSelector) {
         g.point = g.find('.slide-control');
         g.points = g.find('.slide-control');
 
-
         g.showPreview = function () {
             var picture = $(this);
             g.display(picture, 'preview');
         };
+
         g.closePreview = function (event) {
             if (!event || $(event.target).hasClass('preview-img')) {
                 g.previewBox.removeClass('b-preview_shown');
@@ -33,6 +34,9 @@ function Gallery(sSelector) {
                 $('header').show();
             }
         };
+
+        //Выбор индекса изображения для полноекранного просмотра
+        //Selecting the image index for the full-screen display
         g.showImage = function (iShift) {
             g.current += iShift;
             if (g.current >= g.max) {
@@ -43,6 +47,9 @@ function Gallery(sSelector) {
             }
             g.display(g.find('.slide-item:eq(' + g.current + ')'), "preview");
         };
+
+        //Вывод полноекранного просмотра изображения слайдера
+        //Displaying full-screen image slider
         g.display = function (picture, displayParam) {
             if (displayParam == "preview") {
                 var allImgSlider = picture.find('.b-picture__image');
@@ -60,12 +67,18 @@ function Gallery(sSelector) {
             $('header').hide();
             g.previewBox.addClass('b-preview_shown');
         };
+
+
         g.showPrevious = function () {
             g.showImage(-1);
         };
+
         g.showNext = function () {
             g.showImage(1);
         };
+
+        //Закрыть полноекранный просмотр изображения если нажата клавиша Esc
+        //Close full-screen viewing images when pressing the Esc key
         g.escclosePreview = function (event) {
             if (event.which == 27) {
                 g.closePreview();
@@ -74,12 +87,16 @@ function Gallery(sSelector) {
         g.closeBtn.click(function () {
             g.closePreview();
         });
+
+        //Обработчик нажатия миниатюры слайдера
+        //Handler clicking thumbnails slider
         g.pointItem.click(function () {
                 var list = $(this);
                 var selecteddListId = g.pointItem.index(list);
                 g.setList(selecteddListId)
             }
         );
+
         g.setList = function (selecteddListId) {
             $.each(g.slideList, function (id, value) {
                 if (selecteddListId == id) {
