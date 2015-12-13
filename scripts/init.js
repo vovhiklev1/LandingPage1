@@ -20,7 +20,7 @@ $(document).ready(function () {
             clearInterval(this.slideTimerStart.sliderTimer);
         },
 
-        // Анимация перемежения по якорю
+        // Анимация перемещения по якорю
         // Animation move through the anchor
         navPageTo: function () {
             $('#menu a[href^="#"]').click(function () {
