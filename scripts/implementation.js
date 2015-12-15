@@ -88,7 +88,7 @@ var pageAnimate = function () {
     //Анимация фона
     // Background animation
     var onScrollPresent = function () {
-        var scrollTop = $("body").scrollTop();
+        var scrollTop = $((navigator.userAgent.indexOf("Firefox") > -1) ? "html" : "body").scrollTop();
 
         if (scrollTop > 50) {
             scrollTop = 50

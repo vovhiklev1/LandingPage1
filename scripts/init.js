@@ -23,9 +23,9 @@ $(document).ready(function () {
         // Анимация перемещения по якорю
         // Animation move through the anchor
         navPageTo: function () {
-            $('#menu a[href^="#"]').click(function () {
+            $('#menu  a[href^="#"]').click(function () {
                 var el = $(this).attr('href');
-                $('body').animate({
+                $((navigator.userAgent.indexOf("Firefox") > -1) ? "html" : "body").animate({
                     scrollTop: $(el).offset().top
                 }, 500);
                 return false;
